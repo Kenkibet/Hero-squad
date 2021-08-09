@@ -66,4 +66,28 @@ public class Squad {
     public static void setSquads(List<Squad> squads) {
         Squad.squads = squads;
     }
+
+    public static Squad find(int id){
+        return squads.get(id-1);
+    }
+    public static void clear(){
+        squads.clear();
+    }
+    public static void remove(int id){
+        squads.remove(id-1);
+        for (Squad squad:squads) {
+            squad.id = squads.indexOf(squad)+1;
+        }
+    }
+    public List<Hero> getHeros(){
+        return heroes;
+    }
+    public void addHero(Hero myHero){
+        if (heroes.size()<maxSize){
+            heroes.add(myHero);
+        }
+    }
+    public void removeHero(Hero myHero){
+        heroes.remove(myHero);
+    }
 }

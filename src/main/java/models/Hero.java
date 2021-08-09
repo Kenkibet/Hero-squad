@@ -68,6 +68,17 @@ public class Hero {
         Hero.heroes = heroes;
     }
 
+    public static Hero find(int id){
+        return heroes.get(id-1);
+    }
+
+    public static void remove(int id){
+        heroes.remove(id-1);
+        for (Hero hero:heroes) {
+            hero.id = heroes.indexOf(hero)+1;
+        }
+    }
+
     @Override
     public String toString() {
         return "Hero{" +
