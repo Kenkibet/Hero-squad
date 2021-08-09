@@ -1,0 +1,14 @@
+<div class="card shadow p-4 mt-4">
+    <div class="card-header">
+        <h1>Heroes</h1>
+    </div>
+    <div class="card-body">
+        #foreach($hero in $heroes)
+        <h3>$hero.getId()<span>.</span> $hero.getName()</h3>
+        <p>Special Power: $hero.getPower()</p>
+        <p>Weakness: $hero.getWeakness()</p>
+        <p>Age: $hero.getAge()</p>
+        <hr/>
+        #end
+    </div>
+</div>

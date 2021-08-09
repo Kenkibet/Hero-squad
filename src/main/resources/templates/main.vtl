@@ -1,0 +1,17 @@
+#if($squads)
+<div class="card shadow p-4 mt-4">
+    <p>You have the following Squads:</p>
+    <p>Click on the name for more details</p>
+    #foreach ($squad in $squads)
+    <p>$squad.getId()<span>.</span> <a href="/squad/$squad.getId()">$squad.getName()</a></p>
+    #end
+</div>
+#else
+<div class="card shadow p-4 mt-4">
+    <p>You have no squads at the moment.</p>
+</div>
+#end
+
+<a href="/squad/add">
+    <button class="btn btn-dark my-2 my-sm-0" type="submit">Create new Squad</button>
+</a>

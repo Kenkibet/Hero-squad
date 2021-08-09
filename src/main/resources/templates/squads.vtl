@@ -1,0 +1,9 @@
+<div class="card shadow p-4 mt-4">
+    <h1>Squads</h1>
+    #foreach($squad in $squads)
+    <hr/>
+    <h3>$squad.getId()<span>.</span> $squad.getName()</h3>
+    <p>Size: $squad.getMaxSize()</p>
+    <p>Cause: $squad.getReason()</p>
+    #end
+</div>
